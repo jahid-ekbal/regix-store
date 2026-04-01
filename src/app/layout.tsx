@@ -1,0 +1,24 @@
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import { ReactNode } from "react";
+import "./globals.css";
+
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
+  return (
+    <html lang="en">
+      <body>
+        <SiteHeader />
+
+        <main>{children}</main>
+
+        <SiteFooter />
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;
